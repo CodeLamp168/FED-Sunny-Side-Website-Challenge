@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+header .nav-burger {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+header nav ul li {
+  font-family: "Barlow";
+  padding-right: 3em;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+header nav ul li .contact-btn {
+  color: black;
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-family: "Fraunces";
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+header nav ul li .contact-btn:hover {
+  transform: scale(1.05);
+}
+
+.landing {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.landing h1 {
+  margin-top: 3em;
+  font-family: "Fraunces";
+  font-size: 3.2em;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.landing h1::after {
+  content: url("images/icon-arrow-down.svg");
+  position: absolute;
+  left: 49.5%;
+  top: 120%;
+  transition: top 0.3s ease-in-out;
+}
+.landing h1:hover::after {
+  top: 200%;
+}
+
+.section-style {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  width: 100%;
+}
+.section-style img {
+  width: 100%;
+  height: auto;
+}
+.section-style .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+.section-style .text-content h2 {
+  width: 100%;
+  font-size: 31px;
+  margin-bottom: 0.3em;
+  font-family: "Fraunces";
+  font-weight: 900;
+}
+.section-style .text-content p {
+  font-size: 18px;
+}
+.section-style .text-content a {
+  font-family: "Barlow";
+  margin-top: 0.5em;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  width: 100%;
+  position: relative;
+}
+.section-style .text-content a:after {
+  content: "";
+  width: 130px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.section-style .text-content .yellow-btn-design:after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+.section-style .text-content .red-btn-design:after {
+  background-color: hsl(7deg, 99%, 70%);
+}
+.section-style .text-content h2, .section-style .text-content p, .section-style .text-content a {
+  max-width: 420px;
+}
+
+.fruits {
+  flex-direction: row;
+  width: 100%;
+}
+.fruits .fruit-content {
+  position: relative;
+  width: 100%;
+}
+.fruits .fruit-content img {
+  height: 100%;
+}
+.fruits .fruit-content .text-content {
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  padding: 3em;
+}
+.fruits .fruit-content .cherry {
+  color: hsl(167deg, 40%, 24%);
+}
+.fruits .fruit-content .orange {
+  color: hsl(198deg, 62%, 26%);
+}
+
+.testimonials {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.testimonials .client-header {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Fraunces";
+  color: grey;
+  margin-bottom: 2em;
+}
+.testimonials .client-area {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  padding: 1em 5em;
+}
+.testimonials .client-area .profile {
+  border-radius: 100%;
+  width: 80px;
+}
+.testimonials .client-area img, .testimonials .client-area p, .testimonials .client-area h3 {
+  margin-top: 1em;
+}
+
+.image-gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-gallery img {
+  width: 25%;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: hsl(168deg, 38%, 55%);
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+footer ul {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  font-family: "Fraunces";
+  font-size: 20px;
+  text-decoration: none;
+  color: hsl(168deg, 34%, 41%);
+  transition: color 0.3s ease-in;
+}
+footer ul li a:hover {
+  color: white;
+}
+footer .footer-links {
+  margin-top: 3em;
+}
+footer .footer-links li {
+  cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  header .nav-burger {
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+  }
+  header nav {
+    width: 320px;
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(0deg, 0%, 100%);
+    z-index: 3;
+    text-align: center;
+    border-radius: 10px;
+    transition: right 0.3s ease-in-out;
+  }
+  header nav.active {
+    right: 0;
+    left: 0;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul li {
+    padding: 1.5em;
+  }
+  header nav ul li a {
+    color: hsl(232deg, 10%, 55%);
+    font-size: 21px;
+    font-family: "Barlow";
+  }
+  header nav ul li .contact-btn {
+    background-color: hsl(51deg, 100%, 49%);
+  }
+  .landing {
+    min-height: 50vh;
+  }
+  .landing h1 {
+    font-size: 2em;
+  }
+  .landing h1::after {
+    left: 45%;
+  }
+  .section-style {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .section-style .text-content {
+    height: 40vh;
+  }
+  .stand-out {
+    flex-direction: column-reverse;
+  }
+  .fruits {
+    flex-direction: column;
+  }
+  .fruits .fruit-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .fruits .fruit-content .text-content {
+    position: absolute;
+    bottom: -20px;
+    height: 20vh;
+  }
+  .fruits .fruit-content .text-content h2, .fruits .fruit-content .text-content p {
+    font-size: 20px;
+  }
+  .testimonials .client-area {
+    flex-direction: column;
+  }
+  .image-gallery img {
+    width: 50%;
+  }
+}
+/* Responsive styles for even smaller screens */
+@media only screen and (max-width: 480px) {
+  header nav ul li {
+    padding-right: 1em;
+  }
+  .landing h1 {
+    font-size: 1.5em;
+  }
+  .section-style h2 {
+    font-size: 30px;
+  }
+  .section-style p {
+    font-size: 16px;
+  }
+  .fruits .fruit-content .text-content {
+    position: absolute;
+    bottom: -40px;
+  }
+  .fruits .fruit-content .text-content h2, .fruits .fruit-content .text-content p {
+    font-size: clamp(14px, 3vw, 20px);
+  }
+  .testimonials .client-header {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
